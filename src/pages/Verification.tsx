@@ -54,7 +54,7 @@ const Verification = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2">
               <FileJson className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-primary">
                 Kube Credential
               </span>
             </Link>
@@ -71,8 +71,8 @@ const Verification = () => {
       </nav>
 
       <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-primary">
             Credential Verification
           </h1>
           <p className="text-muted-foreground text-lg">
@@ -80,7 +80,7 @@ const Verification = () => {
           </p>
         </div>
 
-        <Card className="p-8 shadow-card hover:shadow-card-hover transition-all duration-300 bg-gradient-card border-border/50">
+        <Card className="p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border-border/50">
           <div className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">
@@ -100,7 +100,7 @@ const Verification = () => {
             <Button
               onClick={handleVerify}
               disabled={isLoading}
-              className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               size="lg"
             >
               {isLoading ? (
@@ -118,7 +118,7 @@ const Verification = () => {
 
             {result && (
               <Card
-                className={`p-6 animate-in fade-in slide-in-from-bottom-2 duration-500 ${
+                className={`p-6 ${
                   result.success && result.data.status === "valid"
                     ? "bg-success/10 border-success/50"
                     : "bg-destructive/10 border-destructive/50"

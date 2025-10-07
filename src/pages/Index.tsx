@@ -11,7 +11,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2">
               <FileJson className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-primary">
                 Kube Credential
               </span>
             </Link>
@@ -28,13 +28,13 @@ const Index = () => {
       </nav>
 
       <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="max-w-4xl mx-auto">
           <div className="mb-6 inline-block">
-            <div className="p-4 rounded-2xl bg-gradient-primary shadow-glow">
-              <Blocks className="h-12 w-12 text-white" />
+            <div className="p-4 rounded-2xl bg-primary shadow-glow">
+              <Blocks className="h-12 w-12 text-primary-foreground" />
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary">
             Kube Credential System
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/issuance">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity shadow-card-hover">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-card-hover">
                 <FileJson className="mr-2 h-5 w-5" />
                 Issue Credential
               </Button>
@@ -59,7 +59,7 @@ const Index = () => {
 
       <section className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 bg-gradient-card border-border/50">
+          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 border-border/50">
             <div className="mb-4 inline-block p-3 rounded-xl bg-primary/10">
               <FileJson className="h-8 w-8 text-primary" />
             </div>
@@ -69,7 +69,7 @@ const Index = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 bg-gradient-card border-border/50">
+          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 border-border/50">
             <div className="mb-4 inline-block p-3 rounded-xl bg-success/10">
               <Shield className="h-8 w-8 text-success" />
             </div>
@@ -79,7 +79,7 @@ const Index = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 bg-gradient-card border-border/50">
+          <Card className="p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-300 border-border/50">
             <div className="mb-4 inline-block p-3 rounded-xl bg-accent/10">
               <Server className="h-8 w-8 text-accent" />
             </div>
